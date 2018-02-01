@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+	
+	<title>Contact Card</title>
+	<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script>
+    var count = 0;
+	$(document).ready(function(){
+
+		$('button.add').on('click', function(event){
+			event.preventDefault();
+			var firstName = $('#firstName').val();
+			var	lastName = $('#lastName').val();
+			var description = $('#description').val();
+			createContactCard(firstName,lastName,description);
+			clearField();
+			count++;
+		// console.log(firstName, lastName, description)
+		});
+		$('#right-box').on('click', '.rightBox', function(){
+			var id = $(this).attr('id');
+			var num;
+			if(id.includes('divBox')){
+				num = id.replace('divBox', '');
+				$(this).addClass("hide");
+				$('#desBox'+num).removeClass("hide");	
+			}
+			else{
+				num = id.replace('desBox', '');
+				$(this).addClass("hide");
+				$('#divBox'+num).removeClass("hide");
+			}
+		 
+		})
+		
+	});
+
+		function createContactCard(firstName,lastName,description){
+			$('#right-box').append('<div class="rightBox" id="divBox'+ count+'"><h1>'+ firstName + ' '+ lastName +'</h1>Click for description!</div><div class="rightBox hide" id="desBox'+ count+'">'+ description +'</div>');
+		}
+		function clearField(){
+			$('#firstName').val('');
+			$('#lastName').val('');
+			$('#description').val('');
+		}
+		
+	</script>
+    </head> 
+    <body>
+    	<div id="main">
+    		<h2>USER CONTACT CARD</h2>
+    		<div id="myForm">
+	    		<form>
+					<Label for="firstname">First name:</label>
+					<input type="text" id="firstName"></br>
+					<Label for="lastname">Last name:</label>
+					<input type="text" id="lastName">
+					<Label for="description" class="description">Description:</label>
+					<input type="text" id="description" placeholder="Enter description">
+					<button type="submit" class="add">Add User</button>
+				</form>
+			</div>
+			<div id="right-box"></div>
+    	</div>
+    </body>
+    
+</html>

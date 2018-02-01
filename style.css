@@ -1,0 +1,98 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	color: white;
+}
+
+#main{
+	padding-top: 10px;
+	width: 950px;
+	height: 930px;
+	margin: 0 auto;
+	background-color: #333333;
+}
+
+button {
+	background-color: #009ac7;
+	display: inline-block;
+	border: none;
+	padding: 10px 30px;
+	cursor: pointer;
+	color: white;
+	margin: 10px 0px;
+	font-weight: 500;
+	margin-left: 10px;
+
+}
+#firstName, #lastName{
+	width: 305px;
+	display: inline-block;
+	margin-top: 10px;
+	padding: 10px;
+	margin-left: 10px;
+}
+
+label[for="firstname"], label[for="lastname"]{
+	width: 125px;
+	font-weight: 700;
+}
+
+#description{
+	padding: 10px;
+	display: block;
+	margin-top: 10px;
+	height: 150px;
+	width: 400px;	
+
+}
+.description{
+	margin-top: 40px;
+	display: block;
+
+}
+#first_name{
+	width: 300px;
+	height: 200px;
+	background-color: green;
+}
+
+#myForm{
+	padding-left:20px;
+	margin-top:10px;
+	display: inline-block;
+	vertical-align: top;
+}
+.hide{
+	display: none;
+}
+.rightBox{
+	background-color: #009ac7;
+	width: 460px;
+	height: 255px;
+	margin-top: 20px;
+	text-align: center;
+	border: 5px solid white;
+
+}
+#right-box{
+	width: 460px;
+	height: 215px;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+
+}
+h1{
+	text-align: center;
+	margin-bottom: 50px;
+	margin-top:20px;
+	padding-top:40px;
+	font-size: 36px
+}
+h2{
+	font-size: 40px;
+	text-align: center;
+}
